@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'w3rc!t=i93g&^=n#-6qq&a3e6b(@1oo7h%2_4et*kej7rz+q0t'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -76,8 +76,12 @@ WSGI_APPLICATION = 'resume.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'd437b19d4ulgah',                      # Or path to database file if using sqlite3.
+        'USER': 'bsrimszqwkedjn',                      # Not used with sqlite3.
+        'PASSWORD': '4f4b5fd5144469b2fd945e6394c4d020213364b0a04b54eb80fd168b4b5a9983',                  # Not used with sqlite3.
+        'HOST': 'ec2-204-236-236-188.compute-1.amazonaws.com',                      # Set to empty string for localhost. Not used with sqlite3.
+        'PORT': '5432',                      # Set to empty string for default. Not used with sqlite3.
     }
 }
 
